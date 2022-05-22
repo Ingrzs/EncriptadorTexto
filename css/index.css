@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(226, 226, 226);
+    margin: 0%;
+    padding: 0%;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.uno{
+    width: 800px;
+height: 600px;
+display: block;
+position: relative;
+top:20px;
+text-align: center;
+
+}
+.dos{
+    width: 300px;    
+    background-color: rgb(255, 255, 255);
+    height: 550px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;    
+    position: relative;
+    top:25px;
+    
+}
+
+.texto1{
+    text-align: center;
+    border: none;
+    color: #0A3871;
+    outline: none;
+    background-color:transparent;
+    font-size: 1.5em;
+    width: 100%;
+    height: 50%;
+    resize: none;
+}
+
+
+::placeholder {
+    color: #0A3871;
+    font-size: 1.5em;
+  }
+
+.btnencriptar{
+    background-color: #0A3871;
+    color:white;
+    border-radius: 20px;
+    width: 30%;
+    height: 10%;
+    border: 1px solid #0A3871;
+}
+.btndesencriptar{
+    background-color: transparent;
+    color:#0A3871;
+    border-radius: 20px;
+    width: 30%;
+    height: 10%;
+    border: 1px solid #0A3871;
+}
+
+.copia{
+    background-color: transparent;
+    color:#0A3871;
+    border-radius: 20px;
+    width: 50%;
+    height:10%;
+    border: 1px solid #0A3871;
+}
+
+p,.btnencriptar,.btndesencriptar,.copia{
+    position: relative;
+    top:20%;
+}
+
+p{
+    color: rgb(54, 54, 54);
+    font-family: monospace;
+}
+.texto2{
+    text-align: center;
+    border: 0;
+    color: #0A3871;
+    outline: none;
+    background-color:transparent;
+    font-size: 1.5em;
+    height: 60%;
+    width: 90%;   
+}
+
+@media only screen and (max-width: 600px) {
+    .uno{
+        width: 90%;
+    height: 300px;
+}
+    .dos{
+        width: 90%;
+        height: 250px;
+    }
+  }
