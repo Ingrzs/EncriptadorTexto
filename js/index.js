@@ -8,10 +8,9 @@ const Validateinput = (v) => {
   return false;
 };
 
-
 const Encriptar = () => {
   let texto = document.querySelector(".textarea_entertext").value;
-  Validateinput(texto)
+  Validateinput(texto);
   let textoCifrado = texto
     .replace(/e/gi, "enter")
     .replace(/i/gi, "imes")
@@ -27,7 +26,7 @@ BtnEncriptar.addEventListener("click", Encriptar);
 
 const Desencriptar = () => {
   let texto = document.querySelector(".textarea_entertext").value;
-  Validateinput(texto)
+  Validateinput(texto);
   let textoCifrado = texto
     .replace(/enter/gi, "e")
     .replace(/imes/gi, "i")
@@ -36,10 +35,10 @@ const Desencriptar = () => {
     .replace(/ufat/gi, "u");
   document.querySelector(".textarea_result").value = textoCifrado;
   document.querySelector(".textarea_entertext").value = "";
-}
+};
 
 const BtnDesencriptar = document.querySelector(".btndesencriptar");
-BtnDesencriptar.addEventListener("click",Desencriptar)
+BtnDesencriptar.addEventListener("click", Desencriptar);
 
 const Copy = () => {
   let content = document.querySelector(".textarea_result");
@@ -51,7 +50,7 @@ const Copy = () => {
   setTimeout(() => {
     document.querySelector(".span_result_copy").style.visibility = "hidden";
   }, 550);
-}
+};
 
 var BtnCopy = document.querySelector(".btncopia");
 BtnCopy.addEventListener("click", Copy);
