@@ -1,106 +1,135 @@
-body{
-    background-color: rgb(226, 226, 226);
-    margin: 0%;
-    padding: 0%;
-}
-.contenedor{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.uno{
-    width: 800px;
-height: 600px;
-display: block;
-position: relative;
-top:20px;
-text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
 
 }
-.dos{
-    width: 300px;    
-    background-color: rgb(255, 255, 255);
-    height: 550px;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    text-align: center;    
-    position: relative;
-    top:25px;
-    
+
+.header,.header h1{
+  text-align: center;
+  font-size: 25px;
+  
+}
+.container {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 4em;
+  margin-top: 30px;
 }
 
-.texto1{
-    text-align: center;
-    border: none;
-    color: #0A3871;
-    outline: none;
-    background-color:transparent;
-    font-size: 1.5em;
-    width: 100%;
-    height: 50%;
-    resize: none;
+.container__entertext {
+  height: 100%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 241, 0.2) 0px 7px 29px 0px;
 }
 
-
-::placeholder {
-    color: #0A3871;
-    font-size: 1.5em;
-  }
-
-.btnencriptar{
-    background-color: #0A3871;
-    color:white;
-    border-radius: 20px;
-    width: 30%;
-    height: 10%;
-    border: 1px solid #0A3871;
-}
-.btndesencriptar{
-    background-color: transparent;
-    color:#0A3871;
-    border-radius: 20px;
-    width: 30%;
-    height: 10%;
-    border: 1px solid #0A3871;
+.container__result {
+  text-align: center;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 241, 0.2) 0px 7px 29px 0px;
 }
 
-.copia{
-    background-color: transparent;
-    color:#0A3871;
-    border-radius: 20px;
-    width: 50%;
-    height:10%;
-    border: 1px solid #0A3871;
+.textarea_entertext {
+  text-align: center;
+  color: #0a3871;
+  background-color: transparent;
+  font-size: 1.5em;
+  outline: none;
+  resize: none;
+  border: none;
+  width: 350px;
+  height: 400px;
+}
+.textarea_entertext::placeholder {
+  color: #0a3871;
+  font-size: 1.5em;
 }
 
-p,.btnencriptar,.btndesencriptar,.copia{
-    position: relative;
-    top:20%;
+.textarea_result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  outline: none;
+  resize: none;
+  color: #0a3871;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  width: 350px;
+  height: 400px;
 }
 
-p{
-    color: rgb(54, 54, 54);
-    font-family: monospace;
+.btnencriptar {
+  background-color: #0a3871;
+  color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 45px;
+  border: 1px solid #0a3871;
+  cursor: pointer;
 }
-.texto2{
-    text-align: center;
-    border: 0;
-    color: #0A3871;
-    outline: none;
-    background-color:transparent;
-    font-size: 1.5em;
-    height: 60%;
-    width: 90%;   
+
+.btndesencriptar {
+  background-color: #0a3871;
+  color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 45px;
+  border: 1px solid #0a3871;
+  cursor: pointer;
+}
+
+.btncopia {
+  background-color: transparent;
+  color: #0a3871;
+  border-radius: 20px;
+  width: 200px;
+  height: 45px;
+  border: 1px solid #0a3871;
+  position: relative;
+  margin-top: 10%;
+  cursor: pointer;
+}
+
+p {
+  color: rgb(54, 54, 54);
+  font-family: monospace;
 }
 
 @media only screen and (max-width: 600px) {
-    .uno{
-        width: 90%;
-    height: 300px;
-}
-    .dos{
-        width: 90%;
-        height: 250px;
-    }
+  .textarea_entertext,
+  .textarea_result {
+    height: 200px;
   }
+}
+
+.span_enter_text {
+  display: block;
+  visibility: hidden;
+  color: red;
+  font-weight: bold;
+}
+
+.span_result_copy {
+  display: block;
+  top: 15px;
+  margin-bottom: -15px;
+  visibility: hidden;
+}
+
+
+.footer{
+  display:flex ;
+  justify-content: center;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

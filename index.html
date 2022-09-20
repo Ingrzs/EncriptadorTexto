@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/index.css" type="text/css">
-        <script src="https://kit.fontawesome.com/a3e517dd97.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/a3e517dd97.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Encriptador de Texto</title>
-</head>
-<body>
-    <div class="contenedor">
-        <div class="uno">
-         <textarea class="texto1" type="text" placeholder="Ingrese texto aqui" required></textarea>
-         <p><i class="fa-solid fa-circle-exclamation"></i> solo use letras minisculas</p>
-         <button class="btnencriptar">Encriptar</button>
-         <button class="btndesencriptar">Desencriptar</button>
+  </head>
+  <body>
+    <header>
+      <div class="header"><h1>Encriptador de Texto</h1></div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="container__entertext">
+          <textarea
+            class="textarea_entertext"
+            type="text"
+            placeholder="Ingrese texto aqui"
+            required
+          ></textarea>
+          <span class="span_enter_text">El campo se encuentra vacio</span>
+          <p>
+            <i class="fa-solid fa-circle-exclamation"></i> solo use letras
+            minisculas
+          </p>
+          <button class="btnencriptar">Encriptar</button>
+          <button class="btndesencriptar">Desencriptar</button>
         </div>
 
-        <div class="dos">
-        <input class="texto2" type="text" placeholder="">
-        <button class="copia">Copiar</button>     
-    </div>
-    </div>
+        <div class="container__result">
+          <textarea
+            class="textarea_result"
+            type="text"
+            placeholder=""
+          ></textarea>
+          <span class="span_result_copy">Texto Copiado</span>
+          <button class="btncopia" title="Copiar Texto">Copia</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="footer_content">
+          <h4>Desarrollado por Ramiro ZS</h4>
+        </div>
+      </div>
+    </footer>
     <script src="./js/index.js"></script>
-   
-</body>
+  </body>
 </html>
-
-
