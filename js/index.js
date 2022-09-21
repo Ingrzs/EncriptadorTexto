@@ -1,3 +1,25 @@
+(function(){
+
+
+
+const img = document.querySelector(".img_empty")
+const textarea_result = document.querySelector(".textarea_result")
+const textarea_entertext= document.querySelector(".textarea_entertext")
+
+ textarea_entertext.addEventListener("input",function(e){
+  if (e.target.value){
+    img.style.display = "none"
+    textarea_result.style.display= "flex"
+  }
+  if(!e.target.value){
+    img.style.display = "block" 
+    textarea_result.style.display= "none"
+  }
+ })
+
+
+
+
 const Validateinput = (v) => {
   if (v === "") {
     document.querySelector(".span_enter_text").style.visibility = "visible";
@@ -21,8 +43,6 @@ const Encriptar = () => {
   document.querySelector(".textarea_entertext").value = "";
 };
 
-const BtnEncriptar = document.querySelector(".btnencriptar");
-BtnEncriptar.addEventListener("click", Encriptar);
 
 const Desencriptar = () => {
   let texto = document.querySelector(".textarea_entertext").value;
@@ -37,9 +57,6 @@ const Desencriptar = () => {
   document.querySelector(".textarea_entertext").value = "";
 };
 
-const BtnDesencriptar = document.querySelector(".btndesencriptar");
-BtnDesencriptar.addEventListener("click", Desencriptar);
-
 const Copy = () => {
   let content = document.querySelector(".textarea_result");
   content.select();
@@ -52,5 +69,13 @@ const Copy = () => {
   }, 550);
 };
 
-var BtnCopy = document.querySelector(".btncopia");
+const BtnEncriptar = document.querySelector(".btnencriptar");
+BtnEncriptar.addEventListener("click", Encriptar);
+
+const BtnDesencriptar = document.querySelector(".btndesencriptar");
+BtnDesencriptar.addEventListener("click", Desencriptar);
+
+const BtnCopy = document.querySelector(".btncopia");
 BtnCopy.addEventListener("click", Copy);
+
+}())
